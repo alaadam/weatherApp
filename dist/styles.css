@@ -1,0 +1,22 @@
+body{
+    background-color: RGB(77, 144, 253) ;
+}
+#getCity{
+    background-color:white ;
+    border: 0px;
+    width: 20%;
+    height: 30px;
+}
+input{
+    background-color: RGB(77, 144, 253) ;
+    border: 0px;
+    width: 60%;
+    height: 30px;
+    border-bottom: 3px solid white;
+}
+#city{
+    display: flex;
+    justify-content:center
+}
+.card{
+}
