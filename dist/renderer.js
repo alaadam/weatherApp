@@ -6,7 +6,6 @@ class Render{
     }
     
     renderData(cities){
-        console.log(cities)
         this.containerElement.html('');
         const newHTML=this.template({mycities : cities});
         this.containerElement.append(newHTML);

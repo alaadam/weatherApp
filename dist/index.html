@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div class="search-section">
-        <input class="input" type="text" placeholder="City">
-        <button id="getCity"> Search </button>
+    <div class="row">
+        <input class="input input-field col s8" type="text" placeholder="City">
+        <button id="getCity" class="btn-floating btn-large waves-effect waves-light white col s2"> Search </button>
     </div>
     <div id="city"> </div>
     <script id="city-template" type="text/x-handlebars-template">
@@ -24,13 +24,14 @@
             <div class="name">{{name}} </div>
             <div> {{temperature }}</div>
             <div> {{condition}} </div>
-            <div>{{conditionPic}}</div>
+            <img src="http://openweathermap.org/img/w/{{conditionPic}}.png" width="100px">
         </div>
         {{/each}}
     </script>
 
     <script src="/jquery/dist/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="/handlebars/dist/handlebars.js"></script>
     <script src="logic.js"></script>
     <script src="renderer.js"></script>

@@ -31,10 +31,8 @@ router.get('/cities', function (req, res) {
 
 router.post('/city', function (req, res) {
         let {city}  = req.body
-        console.log(city)
         request(`${apiWeather}?q=${city}&APPID=${key}&units=metric`, function (error, response, body) {
         let parsedBody = JSON.parse(body)
-        console.log(parsedBody)
         let newCity = new City({
             name : parsedBody.name,
             temperature : parsedBody.main.temp,
@@ -52,5 +50,6 @@ router.delete('/city/:cityName', function (req, res){
         res.send(city)
     })
 })
+
 
 module.exports = router
